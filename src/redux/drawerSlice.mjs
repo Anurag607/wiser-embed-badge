@@ -4,6 +4,7 @@ const initialState = {
     showSidebar: [false, ""],
     showBottomSidebar: [false, ""],
     allBadges: [],
+    currentBadge: null,
 };
 
 const drawerSlice = createSlice({
@@ -18,6 +19,9 @@ const drawerSlice = createSlice({
         },
         setAllBadges: (state, action) => {
             state.allBadges = action.payload;
+        },
+        setCurrentBadge: (state, action) => {
+            state.currentBadge = action.payload;
         }
     },
 });
@@ -25,7 +29,8 @@ const drawerSlice = createSlice({
 export const {
     toggleSidebar,
     toggleBottomSidebar,
-    allBadges,
+    setAllBadges,
+    setCurrentBadge,
 } = drawerSlice.actions;
 
 export default drawerSlice;

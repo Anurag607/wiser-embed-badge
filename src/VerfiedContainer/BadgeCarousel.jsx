@@ -38,7 +38,7 @@ const BadgeCarousel = ({ children, seeAll }) => {
   const { ref: scrollContainerRef, scrollLeft, scrollRight } = useCarousel();
 
   return (
-    <div className="relative w-full group">
+    <div className="relative max-w-[25rem] mobile:max-w-[80vw] w-full group h-fit no-scrollbar">
       {seeAll && (
         <>
           <div

@@ -4,7 +4,7 @@ import { getBrandEmbedLink, getBrandById, embedBadge } from "./helper.mjs";
 import OffCanvasPopup from "./Popup/OffCanvasPopup.jsx";
 import VerfiedContainer from "./VerfiedContainer";
 import { useDispatch } from 'react-redux';
-import {setAllBadges} from "./redux/drawerSlice.mjs";
+import { setAllBadges } from "./redux/drawerSlice.mjs";
 
 function App() {
   const dispatch = useDispatch();
@@ -134,7 +134,7 @@ function App() {
                 </svg>
               </div>
             </div>
-            <div className={"w-fit h-fit mx-auto px-auto"}>
+            <div className={"relative mobile:w-full w-[28rem] h-fit mx-auto px-auto"}>
               {data?.results && data?.results.length > 0 && badges.length > 0 && (
                 <EmbedBadgeLinks url={data?.results} badges={badges} />
               )}
@@ -153,10 +153,10 @@ const EmbedBadgeLinks = ({ url = '', badges }) => {
   };
 
   return (
-      <div className={`w-fith-fit grid place-items-center gap-2 rounded-md shadow-sm border p-2.5`}>
+      <div className={`relative w-full grid place-items-center gap-2 rounded-md shadow-sm border p-2.5`}>
         <div className={`bg-neutral-100 w-full py-2 px-3.5 border flex items-center justify-end`}>
           <div
-            className={`shrink-0 text-neutral-400 duration-200 cursor-pointer`}
+            className={`text-neutral-400 hover:text-neutral-600 transition-all cursor-pointer`}
             onClick={(e) => {
               e.preventDefault();
               // copyToClipboard(embedBadge());
@@ -176,7 +176,7 @@ const EmbedBadgeLinks = ({ url = '', badges }) => {
             </svg>
           </div>
         </div>
-        <div className="block relative mobile:w-[97.5vw] h-fit w-[28rem] mx-auto">
+        <div className="relative h-fit w-full mx-auto">
           <VerfiedContainer tags={badges} url={url} />
         </div>
       </div>

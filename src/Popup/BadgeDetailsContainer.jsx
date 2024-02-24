@@ -4,13 +4,16 @@ import goto from "../assets/goto.svg";
 import grs from "../assets/grs.svg";
 import nf from '../assets/404.png';
 import loadingGif from "../assets/loading.gif";
+import logo from "../assets/icon.png";
+import { useSelector } from 'react-redux';
 
 const BadgeDetailsContainer = ({ badge }) => {
     const [data, setData] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
+    const currentBadge = useSelector((state) => state.drawer.currentBadge);
 
     useEffect(() => {
-        if (badge.length === 0) return;
+        if (!currentBadge || currentBadge.length === 0) return;
         const fetchData = async () => {
             setIsLoading(true);
             const result = await getBadgeDetails();
@@ -20,7 +23,7 @@ const BadgeDetailsContainer = ({ badge }) => {
             }
             result.map(category => {
                 category.badges.map(el => {
-                    if (el.name.toLowerCase() === badge.toLowerCase()) {
+                    if (el.name.toLowerCase() === currentBadge.toLowerCase()) {
                         setData(el);
                         return;
                     }
@@ -31,7 +34,7 @@ const BadgeDetailsContainer = ({ badge }) => {
         };
         fetchData();
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [badge]);
+    }, [currentBadge]);
 
 
     return (
@@ -86,7 +89,7 @@ const BadgeDetailsContainer = ({ badge }) => {
                     </div>
                 )}
                 {data?.goals.length === 0 ? <></> : (
-                    <div className="flex flex-col items-start justify-center gap-y-3 w-full relative mb-5 pb-5">
+                    <div className="flex flex-col items-start justify-center gap-y-3 w-full relative pb-5">
                         <h4 className="font-semibold text-neutral-600">
                             {"Sustainable Development Goals (SDGs)"}
                         </h4>
@@ -104,6 +107,30 @@ const BadgeDetailsContainer = ({ badge }) => {
                         </div>
                     </div>
                 )}
+                <div className={"flex items-end justify-between mb-5 w-full"}>
+                    <button className={"bg-primary hover:bg-transparent border border-primary font-semibold hover:text-primary text-white rounded-full text-md flex items-center justify-center gap-2 cursor-pointer transition-all p-4"}>
+                        <p>{"View full review"}</p>
+                        <div className="">
+                            <svg 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                className={"h-5 w-5"}
+                                viewBox="0 0 512 512"
+                                fill="currentColor"
+                            >
+                                <path 
+                                    fillRule="evenodd"
+                                    d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+                                    clipRule="evenodd"
+                                />
+                            </svg>
+                        </div>
+                    </button>
+                    <div className={"cursor-default pointer-events-none flex items-center justify-center gap-1 text-primary text-xs"}>
+                        <p className='text-neutral-500'>{"Powered By "}</p>
+                        <img loading='lazy' src={logo} alt={"Ecowiser"} className={"w-3 h-3 m-0 p-0"} />
+                        <p>{"Ecowiser"}</p>
+                    </div>
+                </div>
             </div>
         )
     )
