@@ -32,7 +32,7 @@ const Bottombar = () => {
                     >
                         <img src={leftArrow} alt="arrow-left" className={"w-4 h-4 m-0 p-0 rotate-90"} />
                     </button>
-                    <div className={"no-scrollbar flex items-end justify-center gap-x-2 px-3"}>
+                    <div className={"no-scrollbar flex items-end justify-evenly w-full"}>
                         {allBadges.map((badge, index) => {
                             return (
                                 <div 
@@ -41,14 +41,14 @@ const Bottombar = () => {
                                         e.preventDefault();
                                         dispatch(setCurrentBadge(badge.name === "Low Carbon" ? "Offsets Carbon" : badge.name));
                                     }}
-                                    className={`${(currentBadge === (badge.name === "Low Carbon" ? "Offsets Carbon" : badge.name)) ? "rounded-t-full p-2 px-[1rem]" : "rounded-full mb-4 p-1 px-[0.5rem]"} bg-white cursor-pointer hover:shadow transition-all`}
+                                    className={`${(currentBadge === (badge.name === "Low Carbon" ? "Offsets Carbon" : badge.name)) ? "rounded-t-full p-2 px-[1rem]" : "rounded-full mb-4 p-2 px-[0.5rem]"} bg-white cursor-pointer hover:shadow transition-all`}
                                 >
-                                    <img loading={"lazy"} src={badge.icon} alt={badge.name} className={"w-8 h-8 m-0 p-0"} />
+                                    <img loading={"lazy"} src={badge.icon} alt={badge.name} className={"w-6 h-6 m-0 p-0"} />
                                 </div>
                             )
                         })}
                     </div>
-                    <div className={"flex flex-col gap-2 justify-center items-center bg-white h-full w-full p-3 pb-0"}>
+                    <div className={"flex flex-col gap-2 justify-center items-center bg-white h-full w-full p-7 pb-0"}>
                         <BadgeDetailsContainer badge={showBottomSidebar[1]} />
                     </div>
                 </div>
