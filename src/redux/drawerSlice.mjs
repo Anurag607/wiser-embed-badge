@@ -5,6 +5,7 @@ const initialState = {
     showBottomSidebar: [false, ""],
     allBadges: [],
     currentBadge: null,
+    brandUrl: null,
 };
 
 const drawerSlice = createSlice({
@@ -22,6 +23,9 @@ const drawerSlice = createSlice({
         },
         setCurrentBadge: (state, action) => {
             state.currentBadge = action.payload;
+        },
+        setBrandUrl: (state, action) => {
+            state.brandUrl = action.payload;
         }
     },
 });
@@ -31,6 +35,7 @@ export const {
     toggleBottomSidebar,
     setAllBadges,
     setCurrentBadge,
+    setBrandUrl,
 } = drawerSlice.actions;
 
 export default drawerSlice;

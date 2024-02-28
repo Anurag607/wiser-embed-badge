@@ -39,11 +39,11 @@ const Bottombar = () => {
                                     key={index}
                                     onClick={(e) => {
                                         e.preventDefault();
-                                        dispatch(setCurrentBadge(badge.name === "Low Carbon" ? "Offsets Carbon" : badge.name));
+                                        dispatch(setCurrentBadge(badge));
                                     }}
-                                    className={`${(currentBadge === (badge.name === "Low Carbon" ? "Offsets Carbon" : badge.name)) ? "rounded-t-full p-2 px-[1rem]" : "rounded-full mb-4 p-2 px-[0.5rem]"} bg-white cursor-pointer hover:shadow transition-all`}
+                                    className={`${(currentBadge === (badge)) ? "rounded-t-full p-2 px-[1rem]" : "rounded-full mb-4 p-2 px-[0.5rem]"} bg-white cursor-pointer hover:shadow transition-all`}
                                 >
-                                    <img loading={"lazy"} src={badge.icon} alt={badge.name} className={"w-6 h-6 m-0 p-0"} />
+                                    <img loading={"lazy"} src={badge.image_url} alt={badge.name} className={"w-6 h-6 m-0 p-0"} />
                                 </div>
                             )
                         })}
