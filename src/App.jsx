@@ -31,17 +31,19 @@ function App() {
   return (
     <>
       <OffCanvasPopup />
-      <div className={"relative rubik w-screen h-screen flex flex-col items-center justify-center"}>
-        <div className={"relative mobile:w-[95%] w-[28rem] h-fit mx-auto px-auto"}>
-          <div className={`relative w-full grid place-items-center gap-2 rounded-md shadow-sm border p-2.5`}>
-            <div className="relative h-fit w-full mx-auto">
-              <VerfiedContainer tags={badges} url={url} />
-            </div>
-          </div>
-        </div>
-      </div>
+      <VerfiedContainer tags={badges} url={url} />
     </>
   )
 }
+
+// const SampleWrapper = ({children}) => {
+//   return (
+//     <div className={"relative rubik w-screen h-screen flex flex-col items-center justify-center"}>
+//       <div className={"relative mobile:w-[95%] w-[28rem] h-fit grid place-items-center"}>
+//           {children}
+//       </div>
+//     </div>
+//   )
+// }
 
 export default App;
