@@ -31,7 +31,7 @@ const Sidebar = () => {
                             }}
                             className="mr-4 bg-transparent hover:bg-neutral-100 rounded-xl w-fit h-fit text-white text-md font-bold flex items-center justify-center mb-3.5 transition-all duration-300 ease-in-out px-3 py-2"
                         >
-                            <img src={leftArrow} alt="arrow-left" className={"w-4 h-4 m-0 p-0 shrink-0"} />
+                            <img src={"https://res.cloudinary.com/dotwawzhk/image/upload/v1709120458/z4zkqagpolbflyqeqyme.svg"} alt="arrow-left" className={"w-4 h-4 m-0 p-0 shrink-0"} />
                         </button>
                         {allBadges.map((badge, index) => {
                             return (

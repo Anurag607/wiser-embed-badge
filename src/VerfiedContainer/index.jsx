@@ -24,7 +24,7 @@ const VerfiedContainer = ({ tags, url }) => {
     return (
         <div className="h-full w-full flex flex-col gap-4 justify-start items-start relative rounded-lg border-[1.5px] border-[#F2F2F2] mobile:p-1.5 p-2.5 hover:shadow-md transition-all">
             <div className="flex items-center justify-start text-lg font-medium leading-6 text-neutral-800 line-clamp-2 capitalize">
-                <img loading="lazy" src={verifiedBadge} alt="Ecowiser Verified" className="h-[32px] inline-block mr-1.5" />
+                <img loading="lazy" src={"https://res.cloudinary.com/dotwawzhk/image/upload/v1709120457/weolbjug40tiafezovsw.svg"} alt="Ecowiser Verified" className="h-[32px] inline-block mr-1.5" />
                 <div className={"flex flex-col items-start justify-start"}>
                     <p>{"Ecowiser Verified"}</p>
                     <a 

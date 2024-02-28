@@ -30,7 +30,7 @@ const Bottombar = () => {
                         }}
                         className="bg-transparent hover:bg-neutral-100 rounded-xl w-fit h-fit text-white text-md font-bold flex items-center justify-center mb-3.5 transition-all duration-300 ease-in-out border border-neutral-300 px-2 py-3"
                     >
-                        <img src={leftArrow} alt="arrow-left" className={"w-4 h-4 m-0 p-0 rotate-90"} />
+                        <img src={"https://res.cloudinary.com/dotwawzhk/image/upload/v1709120458/z4zkqagpolbflyqeqyme.svg"} alt="arrow-left" className={"w-4 h-4 m-0 p-0 rotate-90"} />
                     </button>
                     <div className={"no-scrollbar flex items-end justify-evenly w-full"}>
                         {allBadges.map((badge, index) => {

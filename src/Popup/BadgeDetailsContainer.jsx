@@ -30,7 +30,7 @@ const BadgeDetailsContainer = () => {
                                 <div key={index} className={"shadow-[8px_8px_50px_0px_#00000014] rounded-full px-3 py-2 bg-white flex items-center justify-center gap-x-3 flex-nowrap"}>
                                     <img
                                         loading="lazy"
-                                        src={grs}
+                                        src={"https://res.cloudinary.com/dotwawzhk/image/upload/v1709120457/hrtnu3m7nokxwa5kwiph.svg"}
                                         alt={currentBadge.name}
                                         className="w-10 h-10 rounded-full"
                                     />
@@ -38,7 +38,7 @@ const BadgeDetailsContainer = () => {
                                     <a href={"https://www.google.com/"}>
                                         <img
                                             loading="lazy"
-                                            src={goto}
+                                            src={"https://res.cloudinary.com/dotwawzhk/image/upload/v1709120457/tql4bfxt3zngzje9ptpc.svg"}
                                             alt={currentBadge.name}
                                             className="w-6 h-6 rounded-full cursor-pointer"
                                         />
@@ -98,7 +98,7 @@ const BadgeDetailsContainer = () => {
                     </a>
                     <div className={"cursor-default pointer-events-none flex items-center justify-center gap-1 text-primary text-xs"}>
                         <p className='text-neutral-500'>{"Powered By "}</p>
-                        <img loading='lazy' src={logo} alt={"Ecowiser"} className={"w-3 h-3 m-0 p-0"} />
+                        <img loading='lazy' src={"https://res.cloudinary.com/dotwawzhk/image/upload/v1709120459/qkdcncmh9pbxwp0g9bse.png"} alt={"Ecowiser"} className={"w-3 h-3 m-0 p-0"} />
                         <p>{"Ecowiser"}</p>
                     </div>
                 </div>
@@ -112,7 +112,7 @@ const Fallback = () => {
         <div className="flex flex-col items-center justify-center gap-y-5 mobile:text-md text-lg font-neutral-500 font-rubik cursor-default w-full h-full relative overflow-x-hidden overflow-y-auto thin-scrollbar pr-2.5">
             <img
                 loading='lazy'
-                src={nf}
+                src={"https://res.cloudinary.com/dotwawzhk/image/upload/v1709120457/wghvizbqry4gmzn7ln8m.png"}
                 alt={"404 Not Found"}
                 className="w-32 h-32"
             />
