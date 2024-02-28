@@ -53,7 +53,7 @@ module.exports = {
         }),
         new HtmlWebPackPlugin({
             template: "./index.html",
-            filename: "./widget/index.html"
+            filename: "./index.html"
         }),
     ]
 }

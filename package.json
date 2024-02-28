@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && webpack --mode production",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "build:bundle": "webpack --mode production",
+    "bundle": "webpack --mode production",
     "start": "webpack-dev-server --mode development"
   },
   "dependencies": {
