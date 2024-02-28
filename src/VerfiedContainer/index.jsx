@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { toggleSidebar as setShowSidebar, toggleBottomSidebar as setShowBottomBar, setCurrentBadge } from "../redux/drawerSlice.mjs";
-import BadgeCarousel from './BadgeCarousel';
+import BadgeCarousel from './BadgeCarousel.jsx';
 import verifiedBadge from "../assets/VerifiedBadge.svg";
 import { useWindowSize } from '../helper.mjs';
 

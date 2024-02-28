@@ -10,7 +10,7 @@ import {
   REHYDRATE,
 } from 'redux-persist';
 import storage from './custom_storage.mjs';
-import drawerSlice from './drawerSlice';
+import drawerSlice from './drawerSlice.mjs';
 
 const persistConfig = {
   key: 'root',
@@ -26,9 +26,10 @@ export const store = configureStore({
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
     }),
-  devTools: import.meta.env.NODE_ENV !== 'production',
+  devTools: false,
   reducer: {
     drawer: persistReducer(persistConfig, drawerSlice.reducer),
+    // drawer: drawerSlice.reducer,
   },
 });
 

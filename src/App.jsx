@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import OffCanvasPopup from "./Popup/OffCanvasPopup.jsx";
-import VerfiedContainer from "./VerfiedContainer";
+import VerfiedContainer from "./VerfiedContainer/index.jsx";
 import { badgeDetails } from './helper.mjs';  
 import { useDispatch } from 'react-redux';
 import { setAllBadges, setBrandUrl } from './redux/drawerSlice.mjs';
@@ -32,18 +32,21 @@ function App() {
     <>
       <OffCanvasPopup />
       <VerfiedContainer tags={badges} url={url} />
+      {/* <SampleWrapper>
+        <VerfiedContainer tags={badges} url={url} />
+      </SampleWrapper> */}
     </>
   )
 }
 
-// const SampleWrapper = ({children}) => {
-//   return (
-//     <div className={"relative rubik w-screen h-screen flex flex-col items-center justify-center"}>
-//       <div className={"relative mobile:w-[95%] w-[28rem] h-fit grid place-items-center"}>
-//           {children}
-//       </div>
-//     </div>
-//   )
-// }
+const SampleWrapper = ({children}) => {
+  return (
+    <div className={"relative rubik w-screen h-screen flex flex-col items-center justify-center"}>
+      <div className={"relative mobile:w-[95%] w-[28rem] h-fit grid place-items-center"}>
+          {children}
+      </div>
+    </div>
+  )
+}
 
 export default App;
