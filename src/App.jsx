@@ -11,7 +11,7 @@ function App() {
   const [badges, setBadges] = useState([]);
 
   useEffect(() => {
-    const ecowiserVerified = document.querySelector(1 ? "root" : "ecowiser-verified");
+    const ecowiserVerified = document.querySelector("ecowiser-verified");
     const url = ecowiserVerified.dataset.url;
     let tags = ecowiserVerified.dataset.badges.replace("Low Carbon", "Offsets Carbon").split(', ');
     tags = tags.map((el, _) => { return el.toLowerCase(); });

@@ -6,7 +6,7 @@ import App from './App.jsx';
 
 import { ReduxProviders } from './redux/reduxProvider.jsx';
 
-ReactDOM.createRoot(document.getElementById(1 ? "root" : "ecowiser-verified")).render(
+ReactDOM.createRoot(document.getElementById("ecowiser-verified")).render(
   <React.StrictMode>
     <ReduxProviders>
       <App />
