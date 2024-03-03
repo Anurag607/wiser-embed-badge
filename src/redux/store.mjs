@@ -29,7 +29,6 @@ export const store = configureStore({
   devTools: false,
   reducer: {
     drawer: persistReducer(persistConfig, drawerSlice.reducer),
-    // drawer: drawerSlice.reducer,
   },
 });
 

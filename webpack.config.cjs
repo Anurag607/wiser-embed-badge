@@ -4,17 +4,28 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
+    mode: 'development',
     entry: "./src/main.jsx",
     output: {
         path: path.resolve(__dirname, "widget"),
-        filename: "ecowiser-verified-bundle.min.js",
+        filename: "ecowiser-verified-bundle.js",
         assetModuleFilename: "[name][ext]",
+    },
+    devServer: {
+        static: {
+            directory: path.resolve(__dirname, 'widget'),
+        },
+        port: 3000,
+        open: true,
+        hot: true,
+        compress: true,
+        historyApiFallback: true,
     },
     module: {
         rules: [
             {
                 test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader, "style-loader", "css-loader"],
+                use: [MiniCssExtractPlugin.loader, "style-loader", "css-loader", 'postcss-loader'],
             },
             {
                 test: /\.(gif|svg|jpg|png)$/,

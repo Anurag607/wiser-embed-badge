@@ -9,7 +9,8 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "bundle": "webpack --mode production",
-    "start": "webpack-dev-server --mode development"
+    "start": "webpack-dev-server --mode development",
+    "serve": "webpack serve"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.1",
@@ -39,7 +40,8 @@
     "mini-css-extract-plugin": "^2.8.1",
     "postcss": "^8.4.35",
     "postcss-cli": "^11.0.0",
-    "postcss-loader": "^8.1.0",
+    "postcss-loader": "^8.1.1",
+    "postcss-preset-env": "^9.4.0",
     "prettier-plugin-tailwindcss": "^0.5.11",
     "style-loader": "^3.3.4",
     "tailwindcss": "^3.4.1",
