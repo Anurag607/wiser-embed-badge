@@ -1,12 +1,18 @@
+import { useState, useEffect } from "react";
 import Widget from './Widget';
 import { createPortal } from 'react-dom';
 
 const App = () => {
+  const [ecowiserVerified, setEcowiserVerified] = useState(null);
+
+  useEffect(() => {
+    setEcowiserVerified(document.querySelector("#ecowiser-verified"));
+  }, []);
+
   return (
-    createPortal(
-      <Widget />,
-      document.getElementById('ecowiser-verified')
-    )
+    <>
+      {ecowiserVerified ? createPortal(<Widget />, ecowiserVerified) : <></>}
+    </>
   )
 }
 
