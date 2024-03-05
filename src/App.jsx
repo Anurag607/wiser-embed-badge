@@ -11,6 +11,7 @@ const App = () => {
 
   return (
     <>
+      <div id="ecowiser-verified" data-url="https://wiser.eco/brands/category/Clothing%20and%20Accessories/944" data-badges="Certified Organic, Low Carbon, Sustainable Materials, Sustainable Packaging, Promotes Circularity, Low Waste"></div>
       {ecowiserVerified ? createPortal(<Widget />, ecowiserVerified) : <></>}
     </>
   )

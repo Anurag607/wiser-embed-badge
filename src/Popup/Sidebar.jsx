@@ -20,8 +20,8 @@ const Sidebar = () => {
 
     return (
         <>
-            <div ref={ref} className={`z-[100000001] top-[12.5%] right-0 w-[35rem] bg-transparent rounded-l-2xl overflow-clip fixed h-[75vh] ease-in-out duration-300 ${showSidebar[0] ? "translate-x-0" : "translate-x-full"} shadow-[0px_0px_200px_0px_#00000047]`}>
-                <div className="mx-auto bg-[#D9D9D9] h-full w-full relative overflow-clip rounded-l-2xl flex flex-row items-start justify-start gap-x-0">
+            <div ref={ref} className={`z-[100000001] top-[12.5%] right-0 w-[35rem] bg-transparent rounded-l-2xl overflow-clip fixed h-[75vh] ease-in-out duration-300 ${showSidebar[0] ? "translate-x-0" : "translate-x-full"} shadow-[0px_0px_40px_0px_#d9d9d9]`}>
+                <div className="mx-auto bg-neutral-100 h-full w-full relative overflow-clip rounded-l-2xl flex flex-row items-start justify-start gap-x-0">
                     <div className={"flex flex-col items-end justify-center gap-2 py-7 pl-4"}>
                         <button
                             onClick={() => {

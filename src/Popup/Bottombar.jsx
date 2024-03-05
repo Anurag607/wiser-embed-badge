@@ -20,8 +20,8 @@ const Bottombar = () => {
 
     return (
         <>
-            <div ref={ref} className={`z-[100000001] bottom-0 left-0 right-0 w-screen bg-transparent rounded-t-2xl overflow-clip fixed h-[75vh] ease-in-out duration-300 ${showBottomSidebar[0] ? "translate-y-0" : "translate-y-full"} shadow-[0px_0px_200px_0px_#00000047]`}>
-                <div className="mx-auto bg-[#D9D9D9] h-full w-full relative overflow-clip rounded-2xl flex flex-col justify-start items-center">
+            <div ref={ref} className={`z-[100000001] bottom-0 left-0 right-0 w-screen bg-transparent rounded-t-2xl overflow-clip fixed h-[75vh] ease-in-out duration-300 ${showBottomSidebar[0] ? "translate-y-0" : "translate-y-full"} shadow-[0px_0px_40px_0px_#d9d9d9]`}>
+                <div className="mx-auto bg-neutral-100 h-full w-full relative overflow-clip rounded-2xl flex flex-col justify-start items-center">
                     <button
                         onClick={() => {
                             dispatch(setShowBottomBar([false, ""]));
