@@ -41,7 +41,7 @@ const Sidebar = () => {
                                         e.preventDefault();
                                         dispatch(setCurrentBadge(badge));
                                     }}
-                                    className={`${(currentBadge === (badge)) ? "rounded-l-full p-2 px-[1rem]" : "rounded-full mr-4 p-1 px-[0.5rem]"} bg-white cursor-pointer hover:shadow transition-all mb-2`}
+                                    className={`${(currentBadge === (badge)) ? "rounded-l-full p-2 px-[1rem]" : "rounded-full mr-4 p-1 px-[0.5rem]"} bg-white cursor-pointer hover:shadow transition-all mb-1`}
                                 >
                                     <img loading={"lazy"} src={badge.image_url} alt={badge.name} className={"w-10 h-10 m-0 p-0"} />
                                 </div>
