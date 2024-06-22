@@ -3,7 +3,6 @@ import BadgeDetailsContainer from "./BadgeDetailsContainer.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleSidebar as setShowSidebar, toggleBottomSidebar as setShowBottomBar } from "../redux/drawerSlice.mjs";
 import { useOnClickOutside } from "../helper.mjs";
-import leftArrow from "../assets/left_arrow.svg";
 import { setCurrentBadge } from "../redux/drawerSlice.mjs";
 
 const Bottombar = () => {

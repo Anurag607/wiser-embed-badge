@@ -1,7 +1,3 @@
-import goto from "../assets/goto.svg";
-import grs from "../assets/grs.svg";
-import nf from '../assets/404.png';
-import logo from "../assets/icon.png";
 import { useSelector } from 'react-redux';
 
 const BadgeDetailsContainer = () => {
